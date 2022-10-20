@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./sass/custom.css"> -->
+
+    <title>Calculadora Judicial</title>
+</head>
+
+<body class="bg-dark">
+    <header class="bg-secondary d-flex flex-column align-items-center">
+        <div>
+            <h1 class="text-center fw-bold">Calculadora Judicial</h1>
+            <h2 class="text-center fw-bold"> Computo de Pena </h2>
+        </div>
+    </header>
+    <main class="d-flex container-fluid justify-content-between mt-xl-5 py-xl-5 flex-column align-items-center flex-xl-row">
+        <form class="container-fluid bg-primary m-4 p-4 d-flex flex-column justify-content-between align-items-center rounded cajas" id="primer-contenedor">
+            <h2 class="h5 text-white fw-bold text-uppercase my-3 text-center">Calcule el tiempo de detención</h2>
+            <label for="fechaDet" class="text-white h5 fw-bold my-1 ">Fecha de detención:</label>
+            <input type="date" class="d-block rounded-pill w-75 my-1 text-center" id="fechaDet">
+            <label for="fechaLib" class="text-white h5 fw-bold my-1">Fecha de libertad o computo:</label>
+            <input type="date" class="d-block rounded-pill w-75 my-1 text-center" id="fechaLib">
+            <div class="w-75 bg-white px-3 border border-3 border-dark text-center fw-bold text-uppercase my-1" id="resultadoDet">Tiempo de detención: </div>
+            <input type="button" id="agregar" value="Agregar periodo" class="w-75 rounded-pill bg-info text-white fw-bold text-uppercase my-1">
+            <div class="w-75 bg-white px-3 border border-3 border-dark text-center fw-bold text-uppercase my-1" id="periodosDet">
+                <p>Periodos de detención:</p>
+            </div>
+            <input type="button" id="calcularDet" value="calcular total" class="w-75 rounded-pill bg-info text-white fw-bold text-uppercase my-1">
+            <div class="w-75 bg-white px-3 border border-3 border-dark text-center fw-bold text-uppercase mb-2" id="resultadoTotalDet">Tiempo Total de detención: </div>
+
+            
+        </form> 
+        <form class="container-fluid bg-primary m-4 p-4 d-flex flex-column justify-content-between align-items-center cajas">
+            <h2 class="h5 text-white fw-bold text-uppercase my-3 text-center">Introduzca el monto de la condena</h2>
+            <label for="anios" class="text-white h5 fw-bold my-2">Introduzca la cantidad de años</label>
+            <input type="number" class="d-block rounded-pill w-75 my-2 px-3 text-center fw-bold" id="anios" value="0" min="0">
+            <label for="meses" class="text-white h5 fw-bold my-2">Introduzca la cantidad de meses</label>
+            <input type="number" class="d-block rounded-pill w-75 my-2 px-3 text-center fw-bold" id="mes" value="0" min="0" max="12">
+            <label for="dias" class="text-white h5 fw-bold my-2">Introduzca la cantidad de días</label>
+            <input type="number" class="d-block rounded-pill w-75 my-2 px-3 text-center fw-bold" id="dias" value="0" min="0" max="30">
+            <input type="button" value="calcular" class=" w-75 rounded-pill bg-info text-white fw-bold text-uppercase mb-4" id="calcularCond">
+            <div class="w-75 bg-white px-3 border border-3 border-dark text-center fw-bold text-uppercase mb-2" id="tiempoRestante">Condena por cumplir: </div>
+
+        </form>
+        <form class="container-fluid bg-primary m-4 p-4 d-flex flex-column justify-content-between align-items-center cajas">
+            <h2 class="h5 text-white fw-bold text-uppercase my-3 text-center">Calcule la fecha de agotamiento de la pena</h2>
+            <label for="fechaComp" class="text-white h5 fw-bold my-2 text-center">Introduzca la fecha actual o de computo</label>
+            <input type="date" class="d-block rounded-pill w-75 my-2 px-3 text-center" id="fechaComp">
+            <input type="button" value="calcular" class="w-75 rounded-pill bg-info text-white fw-bold text-uppercase mb-4" id="calcularAgot">
+            <div class="w-75 bg-white px-3 border border-3 border-dark text-center fw-bold text-uppercase mb-2" id="agotamientoPena">Fecha de agotamiento: </div>
+
+        </form>
+    </main>
+    <div class="d-flex justify-content-center mx-4 mb-4 pb-4">
+    <button class="rounded-pill bg-secondary text-white h-5 px-5 fw-bold" id="reset">RESET</button>
+
+    </div>
+    <footer class="bg-dark">
+        <p class="text-white text-center h3 border border-5 my-0">Desarrollado por F@cuQ ©</p>
+
+    </footer>
+
+    <script src="./app/app.js"></script>
+
+</body>
+
+</html>
