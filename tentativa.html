@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./sass/custom.css">
+
+    <title>Calculadora Judicial</title>
+</head>
+
+<body class="bg-dark">
+    <header class="bg-secondary d-flex flex-column align-items-center">
+        <div>
+            <h1 class="text-center fw-bold">Calculadora Judicial</h1>
+            <h2 class="text-center fw-bold"> Calculos de pena</h2>
+        </div>
+    </header>
+    <main class="d-flex container-fluid justify-content-between mt-xl-5 py-xl-5 flex-column align-items-center flex-xl-row">
+        <form class="container-fluid bg-primary m-4 p-4 d-flex flex-column justify-content-between align-items-center rounded cajas">
+            <h2 class="h5 text-white fw-bold text-uppercase my-3 text-center">Tentativa</h2>
+            
+            <h2 class="h5 text-white fw-bold text-uppercase my-3 text-center">Introduzca la pena minima</h2>
+            <div class="row container-fluid">
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="tentDiasMin" placeholder="DIAS"
+                    min="0" max="30">      
+                </div>
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="tentMesesMin" placeholder="MESES"
+                    min="0" max="12">
+                </div>
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="tentAniosMin" placeholder="AÑOS"
+                    min="0">
+                </div>
+
+            </div>
+            <h2 class="h5 text-white fw-bold text-uppercase my-3 text-center">Introduzca la pena maxima</h2>
+            <div class="row container-fluid">
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="tentDiasMax" placeholder="DIAS"
+                    min="0" max="30">      
+                </div>
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="tentMesesMax" placeholder="MESES"
+                    min="0" max="12">
+                </div>
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="tentAniosMax" placeholder="AÑOS"
+                    min="0">
+                </div>
+
+            </div>
+
+  
+            <input type="button" value="calcular"
+                class=" w-75 rounded-pill bg-info text-white fw-bold text-uppercase mb-4" id="calcularTent">
+            <div class="w-75 bg-white px-3 border border-3 border-dark text-center fw-bold text-uppercase mb-2"
+                id="condenaTent">
+                Pena tentada: 
+            </div>
+        </form>
+        <form class="container-fluid bg-primary m-4 p-4 d-flex flex-column justify-content-between align-items-center rounded cajas">
+            <h2 class="h5 text-white fw-bold text-uppercase my-3 text-center">Concurso real</h2>
+            <h2 class="h5 text-white fw-bold text-uppercase my-3 text-center">Introduzca la pena maxima</h2>
+            <div class="row container-fluid">
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="concDiasMax" placeholder="DIAS"
+                    min="0" max="30">      
+                </div>
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="concMesesMax" placeholder="MESES"
+                    min="0" max="12">
+                </div>
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="concAniosMax" placeholder="AÑOS"
+                    min="0">
+                </div>
+
+            </div>
+            <h2 class="h5 text-white fw-bold text-uppercase my-3 text-center">Introduzca la pena minima</h2>
+            <div class="row container-fluid">
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="concDiasMin" placeholder="DIAS"
+                    min="0" max="30">      
+                </div>
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="concMesesMin" placeholder="MESES"
+                    min="0" max="12">
+                </div>
+                <div class="col-4">
+                    <input type="number" class="d-block rounded-pill w-100 my-2 text-center fw-bold" id="concAniosMin" placeholder="AÑOS"
+                    min="0">
+                </div>
+
+            </div>
+            <div class="container-fluid row">
+                <div class="col-8">
+                    <input type="button" value="calcular"
+                class=" w-100 rounded-pill bg-info text-white fw-bold text-uppercase mb-4" id="calcularConc">
+        
+                </div>
+                <div class="col-4">
+                    <input type="button" value="agregar"
+                class=" w-100 rounded-pill bg-info text-white fw-bold text-uppercase mb-4" id="agregarPena">
+            
+                    
+                </div>
+            </div>
+            <div class="w-75 bg-white px-3 border border-3 border-dark text-center fw-bold text-uppercase mb-2"
+                id="condenaConc">
+                Pena aplicando concurso real:
+            </div>
+        </form>
+
+    </main>
+    <div class="d-flex justify-content-center mx-4 mb-4 pb-4">
+        <button class="rounded-pill bg-secondary text-white h-5 px-5 fw-bold" id="reset">RESET</button>
+
+    </div>
+    <footer class="bg-dark">
+        <p class="text-white text-center h3 border border-5 my-0">Desarrollado por F@cuQ ©</p>
+
+    </footer>
+
+    <script src="./app/app1.js"></script>
+
+</body>
+
+</html>
